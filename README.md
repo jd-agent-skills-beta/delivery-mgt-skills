@@ -50,11 +50,21 @@ If your plan is missing something, such as key results or a start date, the skil
 
 ## Install
 
-The skill is a `validate-plan` folder containing `SKILL.md` (YAML front matter followed by plain-language instructions), this README, the changelog and a `tests/` folder. It works with any agent that can follow written instructions, and it needs no tools.
+The skill itself is the `validate-plan` folder, which contains one file: `SKILL.md` (YAML front matter followed by plain-language instructions). This README, the changelog and the `tests/` folder sit alongside it in the repository and aren't needed to run it. The skill works with any agent that can follow written instructions, and it needs no tools.
+
+```
+delivery-mgt-skills/
+├── validate-plan/
+│   └── SKILL.md       the skill: this is what you install
+├── tests/             test plans and expected results
+├── README.md
+├── CHANGELOG.md
+└── LICENSE
+```
 
 **Claude (web and desktop)**
 
-1. Download `validate-plan-{version}.zip`. Upload it as it is: Claude expects the `validate-plan` folder at the root of the zip, which is how it is packaged.
+1. Download `validate-plan-{version}.zip` from [Releases](https://github.com/jd-agent-skills-beta/delivery-mgt-skills/releases). Upload it as it is: Claude expects the `validate-plan` folder at the root of the zip, which is how it is packaged.
 2. Go to **Customize > Skills**, add the skill, and turn it on. Code execution must be enabled.
 
 See [Use custom skills](https://support.claude.com/en/articles/12512198-use-custom-skills) for the current steps.
@@ -78,7 +88,7 @@ Copy the contents of `SKILL.md` into the chat, or into the agent's instructions 
 
 ## Update and check your version
 
-To update, replace the whole `validate-plan` folder, or upload the whole new zip. Don't edit or replace `SKILL.md` on its own, or the version in its front matter, the README and the tests can drift apart.
+To update, download the new zip from [Releases](https://github.com/jd-agent-skills-beta/delivery-mgt-skills/releases) and replace the whole `validate-plan` folder, or upload the new zip. Check the [changelog](CHANGELOG.md) for what changed.
 
 To check which version is running, ask it to validate any plan. The second line of the report shows the version, for example `validate-plan v1.1.0-beta`.
 
@@ -133,3 +143,7 @@ A plan you're confident should Pass but comes back Gaps or Fail is especially us
 ## Changes
 
 See [CHANGELOG.md](CHANGELOG.md).
+
+## Licence
+
+MIT. See [LICENSE](LICENSE). You're free to use, adapt and share the skill, including commercially, as long as you keep the copyright notice.
