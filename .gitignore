@@ -22,3 +22,5 @@ __pycache__/
 node_modules/
 dist/
 *.log
+
+*.zip
